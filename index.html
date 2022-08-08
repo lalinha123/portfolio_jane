@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://kit.fontawesome.com/68a250f40e.js" crossorigin="anonymous"></script>
+    <title>My Portfolio</title>
+</head>
+
+<body>
+    <i id="open-nav" class="fa-solid fa-bars" onclick="openTopNav();"></i>
+    <nav id="top-nav">
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about-me">About me</a>
+        <a href="#contact-me">Contact me</a>
+    </nav>
+    <i id="close-nav" class="fa-solid fa-xmark" onclick="closeTopNav();"></i>
+
+    <nav id="side-nav">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    </nav>
+
+    <header class="body-part">
+        <div id="header-text">
+            <h1>Hello!<br />I am <mark>Jane Doe</mark>,<br /><i>professional</i>.</h1>
+            <a href="#about-me"><button>Get to know me</button></a>
+            <p id="texto"></p>
+        </div>
+        <img src="Img/jane-doe-photo.jpg" id="my-photo">
+    </header>
+
+    <section id="portfolio" class="body-part">
+        <div class="section-title">
+            <h1 class="title">Portfolio</h1>
+            <p class="subtitle">See some of my work.</p>
+        </div>
+        <div id="portfolio-photos" class="content">
+            <img src="Img/catle.jpg">
+            <img src="Img/ferris-wheel.png">
+            <img src="Img/daisy.png">
+            <img src="Img/dove.jpg">
+            <img src="Img/purple-flowers.png">
+            <img src="Img/flowers.png">
+            <img src="Img/prague.webp">
+        </div>
+    </section>
+
+    <section id="about-me" class="body-part">
+        <div class="section-title">
+            <h1 class="title">About me</h1>
+        </div>
+        <div id="about-me-text" class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, ipsum rerum, quas vero tenetur fugiat, ab
+                quia nesciunt molestias suscipit eligendi amet quo corporis ducimus nisi itaque dignissimos natus
+                veritatis praesentium? Doloribus laboriosam ipsa, aut corrupti dolorem deleniti delectus veritatis,
+                suscipit iusto sunt asperiores quidem animi eos aliquid nobis corporis?</p>
+            <div class="columns">
+                <img src="Img/ramen.png">
+                <div class="columns-text">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis similique cum, vero harum
+                        fugit
+                        aliquid debitis iste, optio at, quam illo? Nostrum laborum dolor aspernatur aut debitis nobis
+                        porro
+                        mollitia?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae rerum est repellendus beatae
+                        itaque
+                        provident quas temporibus odit tempore perspiciatis libero qui distinctio atque dolore corrupti
+                        incidunt odio, nisi nihil?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-me" class="body-part">
+        <div class="section-title">
+            <h1 class="title">Contact me</h1>
+        </div>
+        <div class="columns content">
+            <section id="my-info">
+                <div class="info">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="info-text"><b>Location:</b> Something st., City, Country</p>
+                </div>
+                <div class="info">
+                    <i class="fa-solid fa-phone"></i>
+                    <p class="info-text"><b>Telephone:</b> +xx (xx)xxxx-xxxxx</p>
+                </div>
+                <div class="info">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p class="info-text"><b>Email:</b> jane_doe@email.com</p>
+                </div>
+            </section>
+            <form>
+                <h3 class="subline"><i>Send me a message!</i></h3>
+                <label>Name</label>
+                <input type="text" name="name" id="txt-name">
+                <label>Message</label>
+                <textarea name="message" id="txt-message" cols="20" rows="5" style="resize: none"></textarea>
+                <button>Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <h3 id="footer-title">Jane Doe</h3>
+        <div id="footer-text">
+            <p>City @2022</p>
+        </div>
+    </footer>
+
+    <script src="JS/script.js"></script>
+</body>
+
+</html>

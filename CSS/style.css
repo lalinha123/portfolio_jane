@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('responsive.css');
+
+:root{
+    --fair-gray: #f5f5f5;
+    --light-gray: #ebebeb;
+    --gray: #7a7979cc;
+    --medium-gray: #414141cc;
+    --dark-gray: #2c2c2c;
+    --dusty-pink: #E8C9C9;
+
+    --bg-color: white;
+    --bg-color-2: #f8f8f8;
+    --secondary-color: var(--dusty-pink);
+    --mark: linear-gradient(to bottom, transparent 60%, var(--secondary-color) 61%);
+    --shadow: #2c2c2c2a;
+
+    --main-font: 'Lora', serif;
+}
+
+@keyframes fadeInToBottom{
+    from{
+        opacity: 0;
+        transform: translateY(-70px);
+    }
+
+    top{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInShow{
+    from{
+        opacity: 0;
+    }
+
+    top{
+        opacity: 1;
+    }
+}
+
+*{
+    box-sizing: border-box;
+    transition: 0.2s;
+    scroll-behavior: smooth;
+}
+
+*::selection{
+    background: var(--secondary-color);
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--dark-gray);
+    font-family: var(--main-font);
+
+    margin: 0;
+
+    overflow-x: hidden;
+}
+
+section{
+    max-width: 900px;
+}
+
+button{
+    font-family: inherit;
+    background-color: transparent;
+    color: var(--gray);
+
+    width: fit-content;
+    border: none;
+    outline: 1px solid var(--gray);
+}
+
+button:hover{
+    color: var(--dark-gray);
+
+    outline: 1px solid var(--dark-gray);
+
+    cursor: pointer;
+}
+
+button:active{
+    background-color: var(--secondary-color);
+    color: var(--dark-gray);
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+.subline{
+    width: fit-content;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+nav{
+    z-index: 20;
+}
+
+nav a{
+    color: var(--dark-gray);
+
+    text-decoration: inherit;
+}
+
+#top-nav a:hover{
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+#side-nav{
+    margin: 0;
+    padding: 0;
+
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#side-nav i{
+    color: var(--dark-gray);
+
+    margin: 30px 0;
+
+    display: block;
+
+    transition: 0.1s;
+}
+
+#side-nav i:hover{
+    color: var(--secondary-color);
+}
+
+mark{
+    background: var(--mark);
+    color: inherit;
+}
+
+.section-title{
+    text-align: center;
+    width: fit-content;
+}
+
+.section-title .title{
+    background: var(--mark);
+
+    width: fit-content;
+
+    margin: 0 auto 7px;
+}
+
+.section-title .subtitle{
+    font-size: 17px;
+
+    text-align: center;
+    font-style: italic;
+}
+
+img::selection{
+    user-select: none;
+}
+
+/*      HEADER      */
+header{
+    height: var(--section-height);
+    margin: initial auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header > *{
+    margin: 0 1vw;
+}
+
+#header-text h1{
+    padding: 5px unset;
+
+    animation: fadeInToBottom 1s;
+}
+
+#header-text button{
+    transition: 0.1s;
+
+    animation: fadeInToBottom 0.8s;
+}
+
+#my-photo{
+    height: auto;
+    border-radius: 50%;
+
+    animation: fadeInShow 2s;
+}
+
+/*      PORTFOLIO SECTION      */
+#portfolio-photos{
+    margin: auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#portfolio-photos img{
+    width: auto;
+    height: auto;
+    margin: 5px;
+
+    vertical-align: middle;
+
+    transition: 0.1s;
+}
+
+#portfolio-photos img:hover{
+    cursor: pointer;
+    filter: contrast(70%) brightness(120%);
+}
+
+/*      ABOUT ME SECTION      */
+#about-me{
+    background-color: var(--bg-color);
+
+    width: var(--section-width);
+}
+
+#about-me #about-me-text{
+    width: inherit;
+    max-width: 800px;
+    text-align: justify;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#about-me #about-me-text .columns{
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+#about-me #about-me-text p{
+    line-height: 1.5;
+    text-indent: 3vw;
+}
+
+#about-me #about-me-text .columns img{
+    max-width: 30vw;
+    max-height: 50vh;
+}
+
+#about-me #about-me-text .columns .columns-text{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/*      CONTACT ME SECTION      */
+#contact-me .columns{
+    width: 100%;
+    margin: auto;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#contact-me .columns > *{
+    margin: 0;
+}
+
+#contact-me #my-info{
+    background-color: var(--bg-color-2);
+
+    flex-grow: 1;
+}
+
+#contact-me #my-info .info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#contact-me #my-info .info i{
+    color: var(--secondary-color);
+    font-size: 20px;
+
+    margin-right: 1vw;
+}
+
+#contact-me form{
+    border: 1px solid var(--gray);
+    padding: 20px 20px 50px;
+
+    flex-grow: 1;
+}
+
+#contact-me form input,
+#contact-me form button, 
+#contact-me form textarea{
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+
+    margin: 5px;
+    padding: 7px 10px;
+
+    display: block;
+}
+
+#contact-me form input,
+#contact-me form textarea{
+    border: 1px solid var(--gray);
+}
+
+#contact-me form input:focus, 
+#contact-me form textarea:focus{
+    outline: none;
+    border-color: var(--dark-gray);
+}
+
+#contact-me form > label{
+    font-size: 18px;
+
+    margin: 20px 0 7px;
+
+    display: block;
+}
+
+#contact-me form button{
+    font-size: 18px;
+
+    width: fit-content;
+    margin: 30px 5px 0;
+    padding: 5px 40px;
+}
+
+/*      FOOTER      */
+footer{
+    text-align: center;
+    height: fit-content;
+    border-top: 1px solid var(--light-gray);
+    padding: 30px;
+}
+
+#footer-title{
+    color: var(--medium-gray);
+    margin: 0 5px;
+
+    display: inline-block;
+}
+
+#footer-text{
+    color: var(--gray);
+
+    margin: 0 5px;
+
+    display: inline-block;
+}
+
+#footer-text p{
+    margin: 0;
+}
+
+/*---------------------------------*/
+.image-background{
+    display: none;
+}
+
+.image-background.open{
+    background-color: #111111c2;
+
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+
+    z-index: 25;
+}
+
+.image-background.open img{
+    max-width: 50vw;
+    max-height: 80vh;
+    transform: scale(200%);
+    height: auto;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*---------------------------------*/
+.body-part .content{
+    opacity: 0;
+
+    transition: 0.5s;
+}
+
+.body-part.scrolled .content{
+    opacity: 1;
+}

@@ -1,0 +1,441 @@
+@media only screen and (max-height: 600px) {
+    :root{
+        --section-height: fit-content;
+    }
+
+    section{
+        width: var(--section-width);
+        margin: 10vh auto;
+    }
+
+    .section-title{
+        margin: 0 auto 4vh;
+    }
+
+    header{
+        min-height: 400px;
+        margin: 10vh auto;
+    }
+
+    #about-me #about-me-text p{
+        margin: 1vh auto;
+    }
+}
+
+@media only screen and (min-height: 600px) {
+    :root{
+        --section-height: fit-content;
+    }
+
+    section{
+        width: var(--section-width);
+        margin: 10vh auto;
+    }
+
+    .section-title{
+        margin: 0 auto 5vh;
+    }
+
+    header{
+        margin: 9vh auto;
+    }
+
+    #about-me #about-me-text p{
+        margin: 10px auto;
+    }
+}
+
+@media only screen and (min-height: 800px) {
+    :root{
+        --section-height: 70vh;
+    }
+
+    section{
+        width: var(--section-width);
+        margin: 50px auto;
+    }
+
+    header{
+        margin: 8vh auto;
+    }
+
+    #about-me #about-me-text p{
+        margin: 15px auto;
+    }
+}
+
+@media only screen and (min-height: 900px) {
+    header{
+        max-height: 1000px;
+        margin: 2vh auto;
+    }
+}
+
+/*-----------------------------------------------------*/
+@media only screen and (max-width: 600px) {
+    :root{
+        --section-width: 80vw;
+    }
+
+    #top-nav{
+        background-color: var(--bg-color-2);
+    
+        text-align: center;
+        width: 100vw;
+        height: 100vh;
+        padding: 20px 30px 18px;
+    
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+
+        z-index: 50;
+    }
+
+    #top-nav.open{
+        display: flex;
+    }
+
+    #top-nav a{
+        color: var(--medium-gray);
+        font-size: 6vw;
+    
+        width: fit-content;
+        padding: 20px 0 15px;
+        margin: 20px auto;
+
+        display: block;
+    
+        transition: 0.1s;
+    }
+
+    #open-nav, #close-nav{
+        color: var(--medium-gray);
+        font-size: 5vw;
+
+        display: block;
+        position: fixed;
+        top: 3vh;
+        left: 3vw;
+    }
+
+    #open-nav:hover, #close-nav:hover{
+        cursor: pointer;
+    }
+
+    #close-nav{
+        display: none;
+        z-index: 100;
+    }
+
+    #side-nav{
+        display: none;
+    }
+
+    .section-title .title{
+        font-size: 6vw;
+    }
+
+    header{
+        flex-direction: column-reverse;
+        margin: 10vh auto;
+    }
+
+    #header-text{
+        text-align: center;
+    }
+
+    #header-text h1{
+        font-size: 7vw;
+        margin: 3vh auto;
+        padding: 5px unset;
+    }
+
+    #header-text button{
+        font-size: 3.2vw;
+    
+        padding: 6px 15px;
+    }
+
+    #my-photo{
+        width: 50vw;
+    }
+
+    #portfolio-photos{
+        max-width: 90vw;
+    }
+
+    #portfolio-photos img{
+        max-width: 50vw;
+        max-height: 40vh;
+    }
+
+    #about-me #about-me-text .columns img{
+        display: none;
+    }
+    
+    #contact-me .columns{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    #contact-me .columns > *{
+        width: 90%;
+        max-width: 600px;
+        padding: 3vh 3vw;
+    }
+
+    #contact-me #my-info .info{
+        margin: 1vh 0;
+    }
+
+    #contact-me #my-info .info i{
+        display: inline-block;
+    }
+
+    #contact-me form input,
+    #contact-me form button, 
+    #contact-me form textarea{
+        width: 100%;
+        max-width: unset;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    :root{
+        --section-height: 60vh;
+    }
+
+    body{
+        font-size: 14px;
+    }
+
+    header{
+        margin: 15vh auto;
+    }
+
+    #portfolio-photos img{
+        max-width: 35vw;
+        max-height: 25vh;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    :root{
+        --section-width: 75vw;
+    }
+
+    #top-nav{
+        background-color: var(--bg-color);
+
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid var(--light-gray);
+        padding: 20px 30px 18px;
+
+        display: block;
+        position: fixed;
+        top: 0;
+    }
+    
+    #top-nav a{
+        padding: 20px 0 15px;
+        margin-right: 30px;
+
+        transition: 0.1s;
+    }
+
+    #open-nav, #close-nav{
+        display: none;
+    }
+
+    #side-nav{
+        display: none;
+    }
+
+    .section-title .title{
+        font-size: 35px;
+    }
+
+    header{
+        flex-direction: column-reverse;
+        margin: 20vh 0 0;
+    }
+
+    #header-text{
+        text-align: center;
+    }
+
+    #header-text h1{
+        max-width: 70vw;
+        font-size: 35px;
+        padding: 5px unset;
+    }
+
+    #header-text button{
+        font-size: 20px;
+    
+        padding: 6px 17px;
+    }
+
+    #my-photo{
+        width: 44vw;
+    }
+
+    #portfolio-photos{
+        width: 95%;
+    }
+
+    #portfolio-photos img{
+        max-width: 35vw;
+        max-height: 35vh;
+    }
+
+    #about-me #about-me-text .columns img{
+        display: none;
+    }
+
+    #contact-me .columns{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    #contact-me .columns > *{
+        width: 90%;
+        max-width: 600px;
+        padding: 3vh 3vw;
+    }
+
+    #contact-me #my-info .info{
+        margin: 1vh 0;
+    }
+
+    #contact-me #my-info .info i{
+        display: inline-block;
+    }
+
+    #contact-me form input,
+    #contact-me form button, 
+    #contact-me form textarea{
+        width: 100%;
+        max-width: unset;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    :root{
+        --section-width: 75vw;
+    }
+
+    #side-nav{
+        left: 30px;
+        display: block;
+    }
+
+    #side-nav i{
+        font-size: 20px;
+    }
+
+    header{
+        flex-direction: row;
+    }
+
+    #header-text{
+        text-align: right;
+    }
+
+    #header-text h1{
+        max-width: 35vw;
+    }
+
+    #my-photo{
+        width: 37vw;
+    }
+
+    #portfolio-photos img{
+        max-width: 45vw;
+        max-height: 35vh;
+    }
+
+    #about-me #about-me-text .columns > *:first-child{
+        margin-right: 10px;
+    }
+
+    #about-me #about-me-text .columns > *:last-child{
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    :root{
+        --section-width: 80vw;
+    }
+
+    header{
+        margin-top: 15vh;
+    }
+
+    #header-text h1{
+        font-size: 40px;
+        max-width: 35vw;
+    }
+
+    #my-photo{
+        width: 400px;
+    }
+
+    #portfolio-photos{
+        width: 80%;
+    }
+    
+    #portfolio-photos img{
+        max-width: 400px;
+        max-height: 300px;
+    }
+
+    #about-me #about-me-text .columns img{
+        display: inline-block;
+    }
+
+    #contact-me .columns{
+        padding: 30px;
+
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    #contact-me .columns > *{
+        width: 90%;
+        max-width: 600px;
+        padding: 3vh 3vw;
+    }
+
+    #contact-me #my-info{
+        padding: 4vh 2vw;
+    }
+
+    #contact-me #my-info .info{
+        margin-bottom: 2vh;
+    }
+
+    #contact-me form{
+        width: 32vw;
+        max-width: 370px;
+    }
+
+    #contact-me form input,
+    #contact-me form button, 
+    #contact-me form textarea{
+        width: 100%;
+        max-width: 310px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    :root{
+        --section-width: 800px;
+    }
+}
